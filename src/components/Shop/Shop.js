@@ -22,7 +22,7 @@ const Shop = () => {
 
     return (
         <div className='shop-container'>
-            <div className='product-container'>
+            <div className='grid grid-cols-3 gap-4'>
                    {
                        products.map(product => <Product 
                         key = {product.key}
