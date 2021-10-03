@@ -21,8 +21,8 @@ const Shop = () => {
     }
 
     return (
-        <div className='shop-container'>
-            <div className='grid grid-cols-3 gap-4'>
+        <div className='container grid grid-cols-5 gap-4 mx-auto p-12'>
+            <div className='grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 xl:col-span-4 md:col-span-3 gap-6 mx-auto'>
                    {
                        products.map(product => <Product 
                         key = {product.key}
@@ -33,7 +33,7 @@ const Shop = () => {
                    }
                    
             </div>
-            <div className="cart-container">
+            <div className="">
                 <Cart cart ={cart}></Cart>
             </div>
         </div>

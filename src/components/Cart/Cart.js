@@ -10,14 +10,39 @@ const Cart = (props) => {
         item = product.price;
     }
     return (
-        <div>
-            <h2>Order Summary</h2>
-            <h4>Items Order : {props.cart.length}</h4>
-            <p>Items : {total}</p>
-            <p>Shipping & Handling :</p>
-            <p>Total before tax : </p>
-            <p>Estimated Tax : </p>
-            <h2>Order Total : {total}</h2>
+        <div className=''>
+
+            <h2 className='text-center text-2xl font-medium mb-4'>Order Summary</h2>
+            
+            <table class="table-fixed border-collapse border border-green-800 w-full mx-auto">
+              <tbody>
+                <tr>
+                    <td class="border border-green-600 w-2/3 px-2">Items Order</td>
+                    <td class="border border-green-600 px-2">{props.cart.length}</td>
+                </tr>
+                <tr>
+                    <td class="border border-green-600 px-2">Items</td>
+                    <td class="border border-green-600 px-2">{total}</td>
+                </tr>
+                <tr>
+                    <td class="border border-green-600 px-2">Shipping & Handling</td>
+                    <td class="border border-green-600 px-2"></td>
+                </tr>
+                <tr>
+                    <td class="border border-green-600 px-2">Total before tax</td>
+                    <td class="border border-green-600 px-2"></td>
+                </tr>
+                <tr>
+                    <td class="border border-green-600 px-2">Estimated Tax</td>
+                    <td class="border border-green-600 px-2"></td>
+                </tr>
+                <tr>
+                    <td class="border border-green-600 px-2">Order Total</td>
+                    <td class="border border-green-600 px-2">{total}</td>
+                </tr>
+              </tbody>
+           </table>
+            
         </div>
     );
 };
